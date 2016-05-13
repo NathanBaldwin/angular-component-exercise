@@ -16,7 +16,6 @@
     "url": "https://github.com/NathanBaldwin/angular-component-exercise/issues"
   },
   "homepage": "https://github.com/NathanBaldwin/angular-component-exercise#readme",
-
   "devDependencies": {
     "browser-sync": "^2.12.8",
     "gulp": "^3.9.1",
@@ -24,5 +23,9 @@
     "gulp-concat": "^2.6.0",
     "gulp-filter": "^4.0.0",
     "gulp-ruby-sass": "^2.0.6"
+  },
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18"
   }
 }

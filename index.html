@@ -8,8 +8,14 @@
   <link rel="stylesheet" type="text/css" href="css/main.css"> 
 </head>
 
-<body>
+<body ng-app="app">
   <h1>Component Exercise</h1>
+  <div ui-view></div>
 
-<script src="app/app.js"></script>
+  <!-- ANGULAR SCRIPTS AND OTHER NODE MODULES -->
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <!-- JAVASCRIPTS -->
+  <script src="app/app.js"></script>
 </body>
