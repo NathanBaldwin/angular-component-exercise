@@ -1,3 +1,6 @@
 <h1>here's the container template</h1>
 <h2>Controller test value: {{test}}</h2>
-<first-sub-component></first-sub-component>
+<ul>
+  <li ng-repeat="student in studentList">{{student.first}}</li>
+</ul>
+<first-sub-component student-list='studentList'></first-sub-component>
