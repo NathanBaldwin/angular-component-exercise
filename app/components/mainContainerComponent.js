@@ -10,11 +10,8 @@
     bindings: {
       studentList: '='
     },
-    controller: function($scope) {
-      $scope.studentList = this.studentList
-      console.log("student list from sub component:", $scope.studentList);
-    },
-    templateUrl: 'app/templates/subTemp1.html'
+    controller: 'toDoCtrl',
+    templateUrl: 'app/templates/toDo.html'
   })
 
 })()
