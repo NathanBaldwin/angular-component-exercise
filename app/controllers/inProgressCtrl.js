@@ -1,13 +1,13 @@
 (function() {
   'use strict'
 
-  app.controller('toDoCtrl',
+  app.controller('inProgressCtrl',
     function($scope) {
       $scope.studentList = this.studentList
       console.log("student list from sub component:", $scope.studentList)
 
-      $scope.isInProgress = function(student) {
-        student.status++
+      $scope.inComplete = function(student) {
+        student.status = 1
       }
 
       $scope.isComplete = function(student) {

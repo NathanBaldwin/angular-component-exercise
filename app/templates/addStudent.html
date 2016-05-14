@@ -1,0 +1,38 @@
+<form class="form">
+    <!-- Inputs -->
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="form-group">
+          <input type="text" class="form-control" ng-model='firstName' placeholder="First Name...">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="form-group">
+          <input type="text" class="form-control" ng-model='lastName' placeholder="Last Name...">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Radios -->
+    <div class="row">
+      <div class="col-sm-12">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" ng-model='status' ng-value="1"> Incomplete
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" ng-model='status' ng-value="2"> In Progress
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" ng-model='status' ng-value="3"> Done
+        </label>
+      </div>
+    </div>
+
+  </form>
+    
+  <button class="btn btn-default btn-sm" ng-click='addStudent()'>
+    <i class="fa fa-plus" aria-hidden="true"></i>
+  </button>

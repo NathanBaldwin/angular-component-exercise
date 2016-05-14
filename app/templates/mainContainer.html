@@ -1,4 +1,18 @@
 <h1>here's the container template</h1>
-<h2>Controller test value: {{test}}</h2>
 
-<first-sub-component student-list='studentList'></first-sub-component>
+<div class="container-flex">
+  <div class="row">
+    <div class="col-sm-6">
+      <input type="text" class="form-control" placeholder="Search for...">
+    </div>
+  </div>
+</div>
+
+<div class="container-flex">
+
+  <add-student student-list='studentList'></add-student>
+  
+  <to-do student-list='studentList'></to-do>
+  <in-progress student-list='studentList'></in-progress>
+  <done student-list='studentList'></done>
+</div>

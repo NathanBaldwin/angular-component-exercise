@@ -1,7 +1,8 @@
 <h2>Incomplete</h2>
 <ul>
   <li ng-repeat='student in studentList | filter: student.status = 1'>
-    <input type="checkbox" ng-click='inProgress(student)'></input>
+    <input type="checkbox" ng-click='isInProgress(student)'></input>
+    <input type="checkbox" ng-click='isComplete(student)'></input>
     {{student.first}} {{student.last}}
   </li>
 </ul>
