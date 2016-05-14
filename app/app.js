@@ -7,7 +7,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/multi-component-app',
       views: {
         '': {
-          templateUrl: 'app/templates/mainContainer.html'
+          template: '<main-container></main-container>'
         }
       }
     })
