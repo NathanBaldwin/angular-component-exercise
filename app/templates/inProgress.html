@@ -1,6 +1,6 @@
 <h2>In Progress</h2>
 <ul>
-  <li ng-repeat='student in studentList | filter: student.status = 2'>
+  <li ng-repeat='student in studentList | filter: student.status = 2 | filter: $parent.search'>
     <input type="checkbox" ng-click='inComplete(student)'></input>
     <input type="checkbox" ng-click='isComplete(student)'></input>
     {{student.first}} {{student.last}}

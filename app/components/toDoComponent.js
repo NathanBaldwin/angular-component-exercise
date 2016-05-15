@@ -3,7 +3,8 @@
 
   app.component('toDo', {
     bindings: {
-      studentList: '='
+      studentList: '=',
+      search: '@'
     },
     controller: 'toDoCtrl',
     templateUrl: 'app/templates/toDo.html'

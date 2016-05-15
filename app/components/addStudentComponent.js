@@ -3,8 +3,12 @@
 
   app.component('addStudent', {
     bindings: {
-      studentList: '='
+      studentList: '=',
+      search: '=',
+      test: '='
     },
+    // require: '^mainContainerCtrl',
+    
     controller: 'addStudentCtrl',
     templateUrl: 'app/templates/addStudent.html'
   })

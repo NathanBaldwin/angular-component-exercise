@@ -3,16 +3,17 @@
 <div class="container-flex">
   <div class="row">
     <div class="col-sm-6">
-      <input type="text" class="form-control" placeholder="Search for...">
+      <input type="text" class="form-control" ng-model='search' placeholder="Search for..." ng-change='apply()'>
     </div>
+    <!-- {{search}} -->
   </div>
 </div>
 
 <div class="container-flex">
 
-  <add-student student-list='studentList'></add-student>
-  
-  <to-do student-list='studentList'></to-do>
-  <in-progress student-list='studentList'></in-progress>
-  <done student-list='studentList'></done>
+  <add-student student-list='studentList' search='search'></add-student>
+  <to-do student-list='studentList' search='search' ></to-do>
+  <in-progress student-list='studentList' search='search'></in-progress>
+  <done student-list='studentList' search='search'></done>
+
 </div>
