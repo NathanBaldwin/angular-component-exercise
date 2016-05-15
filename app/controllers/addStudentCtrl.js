@@ -3,8 +3,9 @@
 
   app.controller('addStudentCtrl', ['$scope',
     function($scope) {
-      $scope.studentList = this.studentList
   
+      $scope.studentList = this.studentList
+
 
       $scope.addStudent = function() {
         var newStudent = {
@@ -13,8 +14,9 @@
           status: $scope.status
         }
 
-        //clear form
         $scope.studentList.push(newStudent)
+        
+        //clear form
         $scope.firstName = ''
         $scope.lastName = ''
         $scope.status = false
