@@ -4,7 +4,7 @@ body {
 }
 
 #appContainer {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -20,32 +20,26 @@ body {
       align-items: flex-start;
 }
 
-#main > article {
+#main > to-do {
   margin: 4px;
   padding: 5px;
-  border: 1px solid #cccc33;
-  border-radius: 7pt;
-  background: #dddd88;
+  background: #f56545;
   -ms-flex: 1;
       flex: 1;
 }
 
-#main > nav {
+#main > in-progress {
   margin: 4px;
   padding: 5px;
-  border: 1px solid #8888bb;
-  border-radius: 7pt;
-  background: #ccccff;
+  background: #ffbb22;
   -ms-flex: 1;
       flex: 1;
 }
 
-#main > aside {
+#main > done {
   margin: 4px;
   padding: 5px;
-  border: 1px solid #8888bb;
-  border-radius: 7pt;
-  background: #ccccff;
+  background: #3bb574;
   -ms-flex: 1;
       flex: 1;
 }
@@ -78,9 +72,12 @@ header {
     -webkit-flex-flow: column;
     -ms-flex-direction: column;
         flex-direction: column;
+    -ms-flex-align: initial;
+        -ms-grid-row-align: initial;
+        align-items: initial;
   }
 
-  #main > nav, #main > aside, header, #main > article, .searchBar, .addStudentButton {
+  #main > in-progress, #main > done, header, #main > to-do, .searchBar, .addStudentButton {
     min-height: 50px;
   }
 }

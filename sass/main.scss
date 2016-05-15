@@ -12,7 +12,7 @@ body {
 }
 
 #appContainer {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -27,32 +27,26 @@ body {
   align-items: flex-start;
 }
  
-#main > article {
+#main > to-do {
  margin: 4px;
  padding: 5px;
- border: 1px solid #cccc33;
- border-radius: 7pt;
- background: #dddd88;
+ background: $toDo;
  -webkit-flex: 1;
          flex: 1;
 }
   
-  #main > nav {
+  #main > in-progress {
    margin: 4px;
    padding: 5px;
-   border: 1px solid #8888bb;
-   border-radius: 7pt;
-   background: #ccccff;
+   background: $inProgress;
    -webkit-flex: 1;
            flex: 1;
    }
   
-  #main > aside {
+  #main > done {
    margin: 4px;
    padding: 5px;
-   border: 1px solid #8888bb;
-   border-radius: 7pt;
-   background: #ccccff;
+   background: $done;
    -webkit-flex: 1;
            flex: 1;
    }
@@ -89,17 +83,11 @@ body {
    #main, #page {
     -webkit-flex-flow: column;
             flex-direction: column;
+    align-items: initial;
    }
-
-   // #main > article, #main > nav, #main > aside {
-   //  Return them to document order
-   //  -webkit-order: 0;
-   //          order: 0;
-   // }
   
-   #main > nav, #main > aside, header, #main > article, .searchBar, .addStudentButton {
+   #main > in-progress, #main > done, header, #main > to-do, .searchBar, .addStudentButton {
     min-height: 50px;
-    // max-height: 50px;
    }
 
   }
