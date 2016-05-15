@@ -1,4 +1,105 @@
+// COLOR PALLETE:
+$background: #dce1e3;
+$toDo: #f56545;
+$inProgress: #ffbb22;
+$done: #3bb574;
+$inputWhite: #f5f5f5;
+$accentGrey: #949494;
+
 body {
-  background-color: #541317;
+  background-color: $background;
   color: #c4403f;
 }
+
+#appContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#main {
+  min-height: 160px;
+  margin: 0px;
+  padding: 0px;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-flex-flow: row;
+       flex-flow: row;
+  align-items: flex-start;
+}
+ 
+#main > article {
+ margin: 4px;
+ padding: 5px;
+ border: 1px solid #cccc33;
+ border-radius: 7pt;
+ background: #dddd88;
+ -webkit-flex: 1;
+         flex: 1;
+}
+  
+  #main > nav {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 7pt;
+   background: #ccccff;
+   -webkit-flex: 1;
+           flex: 1;
+   }
+  
+  #main > aside {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 7pt;
+   background: #ccccff;
+   -webkit-flex: 1;
+           flex: 1;
+   }
+ 
+  header {
+   margin: 4px;
+   // min-height: 60px;
+   // border: 1px solid #eebb55;
+   // background: #ffeebb;
+   display: -webkit-flex;
+   display:         flex;
+   -webkit-flex-flow: row;
+           flex-flow: row;
+   }
+
+   .searchBar {
+    height: 60px;
+    background-color: $inputWhite;
+    -webkit-flex: auto;
+            flex: auto;
+   }
+
+   // BUTTONS:
+   .addStudentButton {
+    width: 60px;
+    height: 60px;
+    background-color: $inputWhite;
+    margin-left: 3px;
+   }
+ 
+  /* Too narrow to support three columns */
+  @media all and (max-width: 640px) {
+  
+   #main, #page {
+    -webkit-flex-flow: column;
+            flex-direction: column;
+   }
+
+   // #main > article, #main > nav, #main > aside {
+   //  Return them to document order
+   //  -webkit-order: 0;
+   //          order: 0;
+   // }
+  
+   #main > nav, #main > aside, header, #main > article, .searchBar, .addStudentButton {
+    min-height: 50px;
+    // max-height: 50px;
+   }
+
+  }
