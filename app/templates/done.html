@@ -1,4 +1,6 @@
-<h2>Done</h2>
+<div class="dashed-borders">
+  <h2>Done</h2>
+</div>
 <ul>
   <li ng-repeat='student in studentList | filter: student.status = 3 | filter: $parent.search'>
     <button type="button" class="btn btn-default btn-xs"  ng-click='isInComplete(student)'>

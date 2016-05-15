@@ -1,40 +1,29 @@
 <div id='appContainer'>
   <header>
-    <div class="searchBar"></div>
-    <div class="addStudentButton"></div>
+    <div class="searchBar box-shadow">
+      <input id='search' type="text" ng-model='search' placeholder="Search By Name..."></input>
+    </div>
+    <div class="addStudentButton box-shadow"></div>
   </header>
 
   <div id='main'>
-    <to-do student-list='studentList' search='search' ></to-do>
-    <!-- <article>
-      <p>
-        IPhone +1 photo booth, taxidermy master cleanse four loko salvia twee craft beer bicycle rights. Selfies selvage tattooed, cred fanny pack pop-up vinyl street art tilde bespoke quinoa. Umami heirloom neutra, quinoa vice retro tote bag. Heirloom cronut messenger bag, biodiesel four dollar toast leggings shoreditch everyday carry health goth irony. Lumbersexual stumptown gochujang plaid DIY kogi yr tote bag church-key, craft beer drinking vinegar tattooed. Shoreditch paleo bespoke, schlitz twee letterpress pork belly godard wolf butcher blog lomo fixie. Bicycle rights chia mlkshk cray blue bottle heirloom, banjo etsy marfa 3 wolf moon shabby chic.
-      </p>
-    </article> -->
-    <in-progress student-list='studentList' search='search'></in-progress>
-    <!-- <nav>nav</nav> -->
-    <done student-list='studentList' search='search'></done>
-    <!-- <aside>aside</aside> -->
-  </div>
+    <to-do student-list='studentList' search='search' class='box-shadow'></to-do>
+    <in-progress student-list='studentList' search='search' class='box-shadow'></in-progress>
+    <done student-list='studentList' search='search' class='box-shadow'></done>
+  </div> <!-- End main -->
 
-</div>
-
-<h1>here's the container template</h1>
+</div> <!-- End appContainer -->
 
 <div class="container-flex">
   <div class="row">
     <div class="col-sm-6">
-      <input type="text" class="form-control" ng-model='search' placeholder="Search for...">
+      <!-- <input type="text" class="form-control" ng-model='search' placeholder="Search for..."> -->
     </div>
-    <!-- {{search}} -->
   </div>
 </div>
 
 <div class="container-flex">
 
   <add-student student-list='studentList' search='search'></add-student>
-  <!-- <to-do student-list='studentList' search='search' ></to-do> -->
-  <!-- <in-progress student-list='studentList' search='search'></in-progress> -->
-  <!-- <done student-list='studentList' search='search'></done> -->
 
 </div>

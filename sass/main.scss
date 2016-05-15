@@ -6,14 +6,50 @@ $done: #3bb574;
 $inputWhite: #f5f5f5;
 $accentGrey: #949494;
 
+// FONTS:
+
+@font-face {
+  font-family: cabinReg;
+  src: url(../assets/fonts/Cabin-Regular.ttf);
+}
+
+@font-face {
+  font-family: cabinItalic;
+  src: url(../assets/fonts/Cabin-Italic.ttf);
+}
+
 body {
   background-color: $background;
-  color: #c4403f;
+  color: $background;
+  font-family: cabinReg;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  font-variant: small-caps;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+
+li {
+  color: $inputWhite;
+  list-style-type: none;
+}
+
+.dashed-borders:after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 2px dashed $background;
+  opacity: 0.5;
+  margin-bottom: 9px;
 }
 
 #appContainer {
   width: 80%;
   margin: 0 auto;
+  margin-top: 35px;
 }
 
 #main {
@@ -33,41 +69,87 @@ body {
  background: $toDo;
  -webkit-flex: 1;
          flex: 1;
+
+
+}
+
+.box-shadow {
+  -webkit-box-shadow: 3px 4px 10px -2px $accentGrey;
+  -moz-box-shadow: 3px 4px 10px -2px $accentGrey;
+  box-shadow: 3px 4px 10px -2px $accentGrey;
+
 }
   
-  #main > in-progress {
-   margin: 4px;
-   padding: 5px;
-   background: $inProgress;
-   -webkit-flex: 1;
-           flex: 1;
-   }
-  
-  #main > done {
-   margin: 4px;
-   padding: 5px;
-   background: $done;
-   -webkit-flex: 1;
-           flex: 1;
-   }
- 
-  header {
-   margin: 4px;
-   // min-height: 60px;
-   // border: 1px solid #eebb55;
-   // background: #ffeebb;
-   display: -webkit-flex;
-   display:         flex;
-   -webkit-flex-flow: row;
-           flex-flow: row;
-   }
+#main > in-progress {
+ margin: 4px;
+ padding: 5px;
+ background: $inProgress;
+ -webkit-flex: 1;
+         flex: 1;
+ }
 
-   .searchBar {
-    height: 60px;
-    background-color: $inputWhite;
-    -webkit-flex: auto;
-            flex: auto;
-   }
+#main > done {
+ margin: 4px;
+ padding: 5px;
+ background: $done;
+ -webkit-flex: 1;
+         flex: 1;
+ }
+
+header {
+ margin: 4px;
+ display: -webkit-flex;
+ display:         flex;
+ -webkit-flex-flow: row;
+         flex-flow: row;
+ }
+
+// Search Bar:
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input[type=text]#search {
+  display: block;
+  padding-left: 10px;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 35px;
+  box-shadow: none;
+  border: none;
+  height: 60px;
+  background: $inputWhite;
+  color: $accentGrey;
+}
+
+input#search::-webkit-input-placeholder {
+  color: $accentGrey;
+  font-family: cabinItalic;
+  // text-transform: uppercase;
+}
+input#search::-moz-placeholder {
+  color: $accentGrey;
+  font-family: cabinItalic;
+  // text-transform: uppercase;
+}
+input#search:-moz-placeholder {   /* Older versions of Firefox */
+  color: $accentGrey;
+  font-family: cabinItalic;
+  // text-transform: uppercase;
+}
+input#search:-ms-input-placeholder { 
+  color: $accentGrey;
+  font-family: cabinItalic;
+  // text-transform: uppercase;
+}
+
+.searchBar {
+  height: 60px;
+  background-color: $inputWhite;
+  -webkit-flex: auto;
+          flex: auto;
+}
 
    // BUTTONS:
    .addStudentButton {

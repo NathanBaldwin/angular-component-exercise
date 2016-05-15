@@ -4,6 +4,5 @@
   app.controller('mainContainerCtrl',
     function($scope, studentList) {
       $scope.studentList = studentList
-      $scope.search = 'test text'
     })
 })()
