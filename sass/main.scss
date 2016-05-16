@@ -30,6 +30,11 @@ h2 {
   font-variant: small-caps;
   margin-top: 5px;
   margin-bottom: 2px;
+  padding-left: 5px;
+}
+
+ul {
+  padding-left: 10px;
 }
 
 li {
@@ -150,14 +155,47 @@ input#search:-ms-input-placeholder {
   -webkit-flex: auto;
           flex: auto;
 }
+// BUTTONS:
+.addStudentButton {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  background-color: $inputWhite;
+  margin-left: 3px;
+  text-align: center;
+}
 
-   // BUTTONS:
-   .addStudentButton {
-    width: 60px;
-    height: 60px;
-    background-color: $inputWhite;
-    margin-left: 3px;
-   }
+.addStudentButton:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#plus-sign {
+  width: 35px;
+  margin-top: 21%;
+}
+
+// MODAL:
+
+.modal-dialog {
+  position: relative;
+  width: 70%;
+  max-width: 450px;
+  min-width: 350px;
+  margin: 30px auto;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  color: #333;
+}
+
+#inProgressRadio {
+  margin-left: 35px;
+  margin-right: 35px;
+}
  
   /* Too narrow to support three columns */
   @media all and (max-width: 640px) {

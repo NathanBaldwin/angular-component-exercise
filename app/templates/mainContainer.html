@@ -3,7 +3,10 @@
     <div class="searchBar box-shadow">
       <input id='search' type="text" ng-model='search' placeholder="Search By Name..."></input>
     </div>
-    <div class="addStudentButton box-shadow"></div>
+    <!-- <add-student student-list='studentList' search='search'></add-student> -->
+    <div class="addStudentButton box-shadow" ng-click='showAddStudentModal()'>
+      <img id='plus-sign' src="/assets/graphics/plus.svg">
+    </div>
   </header>
 
   <div id='main'>
@@ -14,16 +17,21 @@
 
 </div> <!-- End appContainer -->
 
-<div class="container-flex">
-  <div class="row">
-    <div class="col-sm-6">
-      <!-- <input type="text" class="form-control" ng-model='search' placeholder="Search for..."> -->
-    </div>
-  </div>
-</div>
+<!-- ADD STUDENT MODAL -->
+<div class="modal fade" tabindex="-1" role="dialog" id="addStudentModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
 
-<div class="container-flex">
+        <!-- ADD STUDENT COMPONENT -->
+        <add-student student-list='studentList' search='search'></add-student>
+        <!-- - - - - - - - - - - - -->
 
-  <add-student student-list='studentList' search='search'></add-student>
+        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
-</div>
+
+
