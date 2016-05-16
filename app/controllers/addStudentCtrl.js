@@ -1,11 +1,10 @@
 (function() {
   'use strict'
 
-  app.controller('addStudentCtrl', ['$scope',
-    function($scope) {
-  
-      $scope.studentList = this.studentList
+  app.controller('addStudentCtrl',
+    function($scope, sortFactory) {
 
+      var studentList = this.studentList
 
       $scope.addStudent = function() {
         var newStudent = {
@@ -14,14 +13,16 @@
           status: $scope.status
         }
 
-        $scope.studentList.push(newStudent)
+        // Add student to list in correct, alphabetical order:
+        var indexToSplice = sortFactory.findIndexToSplice(studentList, newStudent.last)
+        studentList.splice(indexToSplice, 0, newStudent)
         
-        //clear form
+        //clear form:
         $scope.firstName = ''
         $scope.lastName = ''
         $scope.status = false
       }
 
-    }])
+    })
   
 })()
