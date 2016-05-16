@@ -6,7 +6,7 @@
       $scope.studentList = this.studentList
       console.log("student list from sub component:", $scope.studentList)
 
-      $scope.inComplete = function(student) {
+      $scope.notComplete = function(student) {
         student.status = 1
       }
 

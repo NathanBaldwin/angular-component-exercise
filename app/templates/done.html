@@ -3,12 +3,8 @@
 </div>
 <ul>
   <li ng-repeat='student in studentList | filter: student.status = 3 | filter: $parent.search'>
-    <button type="button" class="btn btn-default btn-xs"  ng-click='isInComplete(student)'>
-      <i class="fa fa-times-circle" aria-hidden="true"></i>
-    </button>
-    <button type="button" class="btn btn-default btn-xs"  ng-click='isInProgress(student)'>
-      <i class="fa fa-exclamation-circle fa-1x" aria-hidden="true"></i>
-    </button>
-    {{student.first}} {{student.last}}
+    <a class="btn-to-do" ng-click='isInComplete(student)'></a>
+    <a class="btn-in-progress" ng-click='isInProgress(student)'></a>
+    <span class="indent">{{student.first}} {{student.last}}</span>
   </li>
 </ul>

@@ -31,6 +31,7 @@ h2 {
   margin-top: 5px;
   margin-bottom: 2px;
   padding-left: 5px;
+  font-size: 2.55em;
 }
 
 ul {
@@ -40,6 +41,14 @@ ul {
 li {
   color: $inputWhite;
   list-style-type: none;
+  margin-bottom: 13px;
+  font-size: 125%;
+  display: flex;
+  align-items: center;
+}
+
+.indent {
+  margin-left: 4px;
 }
 
 .dashed-borders:after {
@@ -52,7 +61,7 @@ li {
 }
 
 #appContainer {
-  width: 80%;
+  width: 83%;
   margin: 0 auto;
   margin-top: 35px;
 }
@@ -120,10 +129,10 @@ input[type=text]#search {
   margin: 0;
   width: 100%;
   font-family: sans-serif;
-  font-size: 35px;
+  font-size: 37px;
   box-shadow: none;
   border: none;
-  height: 60px;
+  height: 70px;
   background: $inputWhite;
   color: $accentGrey;
 }
@@ -150,16 +159,16 @@ input#search:-ms-input-placeholder {
 }
 
 .searchBar {
-  height: 60px;
+  height: 70px;
   background-color: $inputWhite;
   -webkit-flex: auto;
           flex: auto;
 }
 // BUTTONS:
 .addStudentButton {
-  width: 60px;
-  min-width: 60px;
-  height: 60px;
+  width: 70px;
+  min-width: 70px;
+  height: 70px;
   background-color: $inputWhite;
   margin-left: 3px;
   text-align: center;
@@ -174,6 +183,72 @@ input#search:-ms-input-placeholder {
   width: 35px;
   margin-top: 21%;
 }
+
+.btn-default.save {
+  background-color: $done;
+  border: none;
+}
+
+.btn-default.cancel {
+  background-color: $toDo;
+  border: none;
+}
+  // In Progress Button:
+.btn-in-progress {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 2px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 4px;
+  background: rgba(255, 187, 34, 0.5);
+  padding: 8px 15px 15px 10px;
+  text-decoration: none;
+  margin-right: 6px;
+  cursor: pointer;
+  background-image: url("/assets/graphics/exclamation.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px 15px;
+}
+
+.btn-done {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 2px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 4px;
+  background: rgba(59, 181, 116, 0.5);
+  padding: 8px 15px 15px 10px;
+  text-decoration: none;
+  margin-right: 6px;
+  cursor: pointer;
+  background-image: url("/assets/graphics/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px 15px;
+}
+
+.btn-to-do {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 2px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 4px;
+  background: rgba(245, 101, 69, 0.7);
+  padding: 8px 15px 15px 10px;
+  text-decoration: none;
+  margin-right: 6px;
+  cursor: pointer;
+  background-image: url("/assets/graphics/x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px 15px;
+}
+
+  
 
 // MODAL:
 
@@ -196,9 +271,21 @@ input#search:-ms-input-placeholder {
   margin-left: 35px;
   margin-right: 35px;
 }
+
+.incomplete {
+  color: $toDo;
+}
+
+.inProgress {
+  color: $inProgress;
+}
+
+.done {
+  color: $done;
+}
  
   /* Too narrow to support three columns */
-  @media all and (max-width: 640px) {
+  @media all and (max-width: 700px) {
   
    #main, #page {
     -webkit-flex-flow: column;

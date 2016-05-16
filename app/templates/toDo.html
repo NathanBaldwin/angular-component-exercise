@@ -3,8 +3,8 @@
 </div>
 <ul>
   <li ng-repeat='student in $ctrl.studentList | filter: student.status = 1 | filter: $parent.search'>
-    <input type="checkbox" ng-click='isInProgress(student)'></input>
-    <input type="checkbox" ng-click='isComplete(student)'></input>
-    {{student.first}} {{student.last}}
+    <a class="btn-in-progress" ng-click='isInProgress(student)'></a>
+    <a class="btn-done" ng-click='isComplete(student)' ></a>
+    <span class="indent">{{student.first}} {{student.last}}</span>
   </li>
 </ul>

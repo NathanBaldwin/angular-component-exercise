@@ -4,8 +4,8 @@
 </div>
 <ul>
   <li ng-repeat='student in studentList | filter: student.status = 2 | filter: $parent.search'>
-    <input type="checkbox" ng-click='inComplete(student)'></input>
-    <input type="checkbox" ng-click='isComplete(student)'></input>
-    {{student.first}} {{student.last}}
+    <a class="btn-to-do" ng-click='notComplete(student)'></a>
+    <a class="btn-done" ng-click='isComplete(student)'></a>
+    <span class="indent">{{student.first}} {{student.last}}</span>
   </li>
 </ul>
