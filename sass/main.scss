@@ -1,4 +1,4 @@
-// COLOR PALLETE:
+// ######## COLORS: ##########
 $background: #dce1e3;
 $toDo: #f56545;
 $inProgress: #ffbb22;
@@ -6,8 +6,7 @@ $done: #3bb574;
 $inputWhite: #f5f5f5;
 $accentGrey: #949494;
 
-// FONTS:
-
+// ######## FONTS: ###########
 @font-face {
   font-family: cabinReg;
   src: url(../assets/fonts/Cabin-Regular.ttf);
@@ -17,6 +16,8 @@ $accentGrey: #949494;
   font-family: cabinItalic;
   src: url(../assets/fonts/Cabin-Italic.ttf);
 }
+
+// ###### ELEMENTS #############
 
 body {
   background-color: $background;
@@ -46,6 +47,8 @@ li {
   display: flex;
   align-items: center;
 }
+
+// ######## LISTS ##########
 
 .indent {
   margin-left: 4px;
@@ -108,15 +111,16 @@ li {
          flex: 1;
  }
 
+
+// SEARCH BAR:
 header {
  margin: 4px;
  display: -webkit-flex;
  display:         flex;
  -webkit-flex-flow: row;
          flex-flow: row;
- }
+}
 
-// Search Bar:
 textarea:focus, input:focus{
     outline: none;
 }
@@ -138,22 +142,21 @@ input[type=text]#search {
 input#search::-webkit-input-placeholder {
   color: $accentGrey;
   font-family: cabinItalic;
-  // text-transform: uppercase;
 }
+
 input#search::-moz-placeholder {
   color: $accentGrey;
   font-family: cabinItalic;
-  // text-transform: uppercase;
 }
-input#search:-moz-placeholder {   /* Older versions of Firefox */
+
+input#search:-moz-placeholder {
   color: $accentGrey;
   font-family: cabinItalic;
-  // text-transform: uppercase;
 }
+
 input#search:-ms-input-placeholder { 
   color: $accentGrey;
   font-family: cabinItalic;
-  // text-transform: uppercase;
 }
 
 .searchBar {
@@ -162,7 +165,8 @@ input#search:-ms-input-placeholder {
   -webkit-flex: auto;
           flex: auto;
 }
-// BUTTONS:
+
+// ######### BUTTONS: #######
 .addStudentButton {
   width: 70px;
   min-width: 70px;
@@ -246,10 +250,8 @@ input#search:-ms-input-placeholder {
   background-size: 11px 15px;
 }
 
-  
 
-// MODAL:
-
+// ########## ADD STUDENT MODAL: ########
 .modal-dialog {
   position: relative;
   width: 70%;
@@ -281,24 +283,26 @@ input#search:-ms-input-placeholder {
 .done {
   color: $done;
 }
+
+// ######## RESPONSIVENESS: ######
  
-  /* Too narrow to support three columns */
-  @media all and (max-width: 750px) {
-  
-   #main, #page {
+//  Too narrow to support three columns:
+@media all and (max-width: 750px) {
+
+  #main, #page {
     -webkit-flex-flow: column;
             flex-direction: column;
     align-items: initial;
-   }
-  
-   #main > in-progress, #main > done, header, #main > to-do, .searchBar, .addStudentButton {
-    min-height: 50px;
-   }
+  }
 
-   input[type=text]#search {
+  #main > in-progress, #main > done, header, #main > to-do, .searchBar, .addStudentButton {
+    min-height: 50px;
+  }
+
+  input[type=text]#search {
     font-size: 23px;
     height: 60px;
-   }
+  }
 
   .addStudentButton {
     width: 60px;

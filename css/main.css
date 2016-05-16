@@ -133,7 +133,6 @@ input#search::-moz-placeholder {
 }
 
 input#search:-moz-placeholder {
-  /* Older versions of Firefox */
   color: #949494;
   font-family: cabinItalic;
 }
@@ -259,7 +258,6 @@ input#search:-ms-input-placeholder {
   color: #3bb574;
 }
 
-/* Too narrow to support three columns */
 @media all and (max-width: 750px) {
   #main, #page {
     -webkit-flex-flow: column;
