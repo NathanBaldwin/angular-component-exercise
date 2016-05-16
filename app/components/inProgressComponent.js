@@ -3,7 +3,8 @@
 
   app.component('inProgress', {
     bindings: {
-      studentList: '='
+      studentList: '=',
+      search: '='
     },
     controller: 'inProgressCtrl',
     templateUrl: 'app/templates/inProgress.html'

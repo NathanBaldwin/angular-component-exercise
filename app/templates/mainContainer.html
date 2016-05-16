@@ -1,33 +1,36 @@
 <div id='appContainer'>
+
   <header>
     <div class="searchBar box-shadow">
       <input id='search' type="text" ng-model='search' placeholder="Search By Name..."></input>
     </div>
-    <!-- <add-student student-list='studentList' search='search'></add-student> -->
     <div class="addStudentButton box-shadow" ng-click='showAddStudentModal()'>
       <img id='plus-sign' src="/assets/graphics/plus.svg">
     </div>
   </header>
 
   <div id='main'>
+    <!-- TO DO COMPONENT -->
     <to-do student-list='studentList' search='search' class='box-shadow'></to-do>
+
+    <!-- IN PROGRESS COMPONENT -->
     <in-progress student-list='studentList' search='search' class='box-shadow'></in-progress>
+
+    <!-- DONE COMPONENT: -->
     <done student-list='studentList' search='search' class='box-shadow'></done>
   </div> <!-- End main -->
-
+  
 </div> <!-- End appContainer -->
 
-<!-- ADD STUDENT MODAL -->
+<!-- ##### ADD STUDENT MODAL ####-->
 <div class="modal fade" tabindex="-1" role="dialog" id="addStudentModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
 
-        <!-- ADD STUDENT COMPONENT -->
+        <!-- ADD STUDENT COMPONENT: -->
         <add-student student-list='studentList' search='search'></add-student>
-        <!-- - - - - - - - - - - - -->
 
-        
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

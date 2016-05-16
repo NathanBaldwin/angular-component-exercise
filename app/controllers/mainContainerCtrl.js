@@ -8,4 +8,5 @@
         $("#addStudentModal").modal('show')
       }
     })
+  
 })()

@@ -2,7 +2,7 @@
   <h2>Incomplete</h2>
 </div>
 <ul>
-  <li ng-repeat='student in $ctrl.studentList | filter: student.status = 1 | filter: $parent.search'>
+  <li ng-repeat='student in $ctrl.studentList | filter: student.status = 1 | filterBy: ["first + last"]: $ctrl.search'>
     <a class="btn-in-progress" ng-click='isInProgress(student)'></a>
     <a class="btn-done" ng-click='isComplete(student)' ></a>
     <span class="indent">{{student.first}} {{student.last}}</span>

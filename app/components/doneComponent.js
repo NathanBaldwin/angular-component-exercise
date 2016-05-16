@@ -3,7 +3,8 @@
 
   app.component('done', {
     bindings: {
-      studentList: '='
+      studentList: '=',
+      search: '='
     },
     controller: 'doneCtrl',
     templateUrl: 'app/templates/done.html'
