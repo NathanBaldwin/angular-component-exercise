@@ -4,7 +4,8 @@
   "description": "Exercise to explore use of components in Angular 1.5",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "angular-filter": "^0.5.8",
     "angular-ui-router": "^0.2.18",
     "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
     "font-awesome": "^4.6.1",
     "jquery": "^2.2.3"
   }
