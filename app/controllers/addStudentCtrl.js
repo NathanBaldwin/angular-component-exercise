@@ -13,7 +13,7 @@
           status: $scope.status
         }
 
-        // Add student to list in correct, alphabetical order:
+        // Add student to master list in correct, alphabetical order:
         var indexToSplice = sortFactory.findIndexToSplice(studentList, newStudent.last)
         studentList.splice(indexToSplice, 0, newStudent)
         

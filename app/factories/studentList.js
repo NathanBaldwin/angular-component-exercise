@@ -53,6 +53,41 @@
           first: "Tim",
           last: "Tebow",
           status: 1
+        },
+        {
+          first: "Stephen",
+          last: "Curry",
+          status: 3
+        },
+        {
+          first: "Magic",
+          last: "Johnson",
+          status: 2
+        },
+        {
+          first: "Babe",
+          last: "Ruth",
+          status: 1
+        },
+        {
+          first: "James",
+          last: "Brown",
+          status: 3
+        },
+        {
+          first: "Brad",
+          last: "Pitt",
+          status: 1
+        },
+        {
+          first: "George",
+          last: "Clooney",
+          status: 2
+        },
+        {
+          first: "Julia",
+          last: "Roberts",
+          status: 1
         }
       ]
 
